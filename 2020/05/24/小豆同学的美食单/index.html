@@ -77,7 +77,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">常用链接 </a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链 </a>
     			
             
     			
@@ -447,6 +447,27 @@
 
   <!-- Valine -->
   
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "oHEyaqlasD7MIVjTrV5vEk9P-gzGzoHsz",
+            app_key: "V7mYdW1htbqAwqsdcGgN3ptS",
+            placeholder: "Just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </section>
+  
 
 
 
@@ -554,7 +575,7 @@
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">常用链接 </a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链 </a></li>
       
         
       
@@ -677,6 +698,14 @@
     	<section class="tools-section tools-section-friends" q-show="friends">
   		
         <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://console.leancloud.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>LeanCloud</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://gitee.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Gitee</a>
+            </li>
           
             <li class="search-li">
               <a href="https://pasteme.cn/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>PasteMe</a>
